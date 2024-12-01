@@ -17,6 +17,8 @@ return {
         null_ls.builtins.formatting.stylelint,
         null_ls.builtins.diagnostics.stylelint,
 
+        null_ls.builtins.formatting.prettier
+
      },
     })
 
