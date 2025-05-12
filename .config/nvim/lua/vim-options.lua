@@ -26,6 +26,9 @@ vim.keymap.set('n', "Db", ":call vimspector#ToggleBreakpoint()<cr>")
 vim.keymap.set('n', "Dw", ":call vimspector#AddWatch()<cr>")
 vim.keymap.set('n', "De", ":call vimspector#Evaluate()<cr>")
 
+--Dismiss mesages
+vim.keymap.set("n", "<leader>z", "<cmd>NoiceDismiss<CR>", { desc= "Dismiss Noice Message" })
+
 -- Navigate vim panes better
 vim.keymap.set("n", "<c-k>", ":wincmd k<CR>")
 vim.keymap.set("n", "<c-j>", ":wincmd j<CR>")
@@ -35,6 +38,8 @@ vim.keymap.set("n", "<c-l>", ":wincmd l<CR>")
 vim.keymap.set("n", "<Tab>", "<Cmd>BufferPrevious<CR>")
 vim.keymap.set("n", "<S-Tab>", "<Cmd>BufferNext<CR>")
 vim.keymap.set("n", "<c-x>", "<Cmd>BufferClose<CR>")
+vim.keymap.set("n", "c-s", "<Esc>:w<CR>")
+vim.api.nvim_create_user_command('W', 'w', {})
 
 vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>")
 vim.wo.number = true

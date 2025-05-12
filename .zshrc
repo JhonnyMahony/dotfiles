@@ -60,6 +60,7 @@ setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
 
+
 # Completion styling
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
@@ -67,7 +68,7 @@ zstyle ':completion:*' menu no
 
 # Aliases
 alias ls='ls --color'
-alias vim='nvim'
+alias vi='nvim'
 alias c='clear'
 alias cat='bat'
 
@@ -78,3 +79,5 @@ export PATH="$HOME/.local/share/solana/install/active_release/bin:$PATH"
 export PATH="$HOME/.avm/bin:$PATH"
 export PATH="/home/shpinatovets/.yarn/bin:$PATH"
 export $(dbus-launch)
+export ANDROID_HOME="$HOME/Android/Sdk"
+export NDK_HOME="/opt/android-ndk"

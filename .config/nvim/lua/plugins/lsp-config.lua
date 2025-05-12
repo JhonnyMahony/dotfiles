@@ -10,11 +10,6 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		lazy = false,
     init_options = {
-      userLanguages = {
-        eelixir = "html-eex",
-        eruby = "erb",
-        rust = "html",
-      },
     },
 		opts = {
 			auto_install = true,
@@ -24,7 +19,26 @@ return {
 		"neovim/nvim-lspconfig",
     --url = 'git@github.com:neovim/nvim-lspconfig.git',
 		lazy = false,
+    init_options = {
+      userLanguages = {
+        eelixir = "html-eex",
+        eruby = "erb",
+        rust = "html",
+      },
+    },
+
+    vim.diagnostic.config({
+      virtual_text = true,
+      signs = true,
+      update_in_insert = false,
+      underline = true,
+      severity_sort = false,
+      float = true,
+    }),
+
+
 		config = function()
+
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 			local lspconfig = require("lspconfig")
@@ -44,7 +58,10 @@ return {
 			})
 			lspconfig.html.setup({
 				capabilities = capabilities,
-				filetypes = { "html", "htmldjango" },
+				filetypes = { "html", "rs" },
+			})
+			lspconfig.bashls.setup({
+				capabilities = capabilities,
 			})
 
 
