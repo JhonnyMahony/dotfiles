@@ -81,3 +81,4 @@ export PATH="/home/shpinatovets/.yarn/bin:$PATH"
 export $(dbus-launch)
 export ANDROID_HOME="$HOME/Android/Sdk"
 export NDK_HOME="/opt/android-ndk"
+export PKG_CONFIG_PATH=/usr/lib/pkgconfig:$PKG_CONFIG_PATH
