@@ -26,6 +26,15 @@ return {
         rust = "html",
       },
     },
+        settings = {
+          ["rust-analyzer"] = {
+            cargo = {
+              extraEnv = {
+                RUSTFLAGS = "--cfg=web_sys_unstable_apis",
+              },
+            },
+          },
+        },
 
     vim.diagnostic.config({
       virtual_text = true,
