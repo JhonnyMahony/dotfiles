@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=Run Desktop File
+Exec=sh %F
+Terminal=false
+MimeType=application/x-desktop;
